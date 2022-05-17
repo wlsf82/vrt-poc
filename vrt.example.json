@@ -1,0 +1,6 @@
+{
+  "apiUrl": "http://localhost:4200",
+  "project": "your-project-here",
+  "apiKey": "your-api-key-here",
+  "branchName": "main"
+}
