@@ -4,7 +4,10 @@
   "description": "Sample project to experiment with Visual Regression Tracker.",
   "scripts": {
     "cy:open": "cypress open",
-    "test": "cypress run"
+    "test": "cypress run",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:edge": "cypress run --browser edge"
   },
   "keywords": [
     "Cypress",
