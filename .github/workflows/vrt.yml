@@ -1,0 +1,18 @@
+name: ci 🧪
+on: [push]
+jobs:
+  visual-regression-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
+
+      - name: Write the vrt.json file 📝
+        # use quotes around the secret, as its value
+        # is simply inserted as a string into the command
+        run: |
+          echo '${{ secrets.VRT_CI }}' > vrt.json
+
+      # https://github.com/cypress-io/github-action
+      - name: Cypress run 👁️
+        uses: cypress-io/github-action@v3
