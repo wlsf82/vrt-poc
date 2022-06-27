@@ -11,8 +11,8 @@ describe('Ticketbox', function() {
     cy.get('#agree').check()
     cy.vrt(`${title} - mandatory fields filled`)
     cy.contains('button', 'Confirm Tickets').click()
-    cy.vrt(`${title} - sent`)
     cy.get('.success').should('be.visible')
+    cy.vrt(`${title} - sent`)
   })
 
   it('does not accept invalid email format', function() {
